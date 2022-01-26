@@ -153,9 +153,9 @@ plt.show()
 
 
 import os
-# !pip install opencv-python
+#pip install opencv-python
 
-import cv2
+#import cv2
 # !pip install scikit-image
 from skimage.transform import resize
 
@@ -163,8 +163,8 @@ foldername = "./test_images/"
 
 # my_list = []
 # for img_count, filename in enumerate(os.listdir(foldername)):
-# img = plt.imread('/content/test_images/download (3).jpeg')
-img = plt.imread(os.path.join(foldername,'download4.jpg'))
+img = plt.imread('download (3).jpeg')
+#img = plt.imread(os.path.join(foldername,'download4.jpg'))
 plt.imshow(img)
 resized_image = resize(img, (32,32, 3))
      
@@ -182,7 +182,7 @@ for i in range(10):
             temp = list_index[i]
             list_index[i] = list_index[j]
             list_index[j] = temp
-display(list_index)
+print(list_index)
         
 for i in range(5):
     print(classification[list_index[i]], ':', round((predictions[0][list_index[i]] * 100),2), '%')
